@@ -23,6 +23,7 @@ def twilio_post():
                               text=message, username='twiliobot',
                               icon_emoji=':robot_face:')
     return Response(response.toxml(), mimetype="text/xml"), 200
+
 @app.route('/slack', methods=['POST'])
 def slack_post():
     if request.form['token'] == SLACK_WEBHOOK_SECRET:

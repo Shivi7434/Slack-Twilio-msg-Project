@@ -27,7 +27,7 @@ def twilio_post():
 @app.route('/slack', methods=['POST'])
 def slack_post():
     if request.form['token'] == SLACK_WEBHOOK_SECRET:
-        channel = request.form['channel_name']
+        channel = request.form['Shivali']
         username = request.form['user_name']
         text = request.form['text']
         response_message = username + " in " + channel + " says: " + text
